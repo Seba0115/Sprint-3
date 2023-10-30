@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="principal">
+        <div class="imagenFondo"></div>
+        <section class="formulario" id="div1">
+            <form class="formulario-forma">
+                <label class="formulario__label" for="cardholder">CARDHOLDER NAME</label>
+                <input class="formulario__input" type="text" id="cardholder" placeholder="e.g. Jane Appleseed"
+                    maxlength="18">
+                    <span class="pepito error-message" id="nombreError"></span>
+                <div class="formulario__cardholder--error"></div>
+
+                <label class="formulario__label" for>CARD NUMBER</label>
+                <input class="formulario__input" type="text" id="cardnumber" placeholder="e.g. 1234 5678 9123"
+                    maxlength="19">
+                    <span class="pepito2" id="tarjetaError"></span>
+                <div class="formulario__inputnumber--error"></div>
+                <div class="contenedor">
+                    <label class="formulario__label span-2" for="dates">EXP. DATE(MM/YY)</label>
+                    <label class="formulario__label span-2" for="cvc">CVC</label>
+                    <input class="formulario__input" type="text" id="month" placeholder="MM" maxlength="2">
+                    <input class="formulario__input" type="text" id="year" placeholder="YY" maxlength="2">
+                    <input class="formulario__input span-2" type="text" id="cvcnumber" placeholder="CVC" maxlength="4">
+                    <span class="pepito3" id="monthSpanError"></span><span class="pepito4" id="yearSpanError"></span> <span class="pepito5" id="spanCvcError"></span>
+                </div>
+                <button class="formulario__btn__confirm" type="button" onclick="funcionesJuntas('div1')">Confirm</button>
+
+
+            </form>
+        </section>
+    </main>
+    <section class="card__front">
+        <img src="./images/bg-card-front.png" alt="card-front__logo">
+        <span id="spancardnumber" class="card__front__number">0000 0000 0000 0000</span>
+        <span id="spancardname" class="card__front__name">JANE APPLESEED</span>
+        <span class="card__front__exp" id="span3"> 00</span>
+        <span class="card__front__exp2" id="">/</span>
+        <span class="card__front__exp3" id="span1">00</span>
+    </section>
+
+    <section class="card__back" id="pepito">
+        <img src="./images/bg-card-back.png" alt="">
+        <span id="span2">000</span>
+    </section>
+
+    <div id="div2" class="agradecimiento ocultar">
+        <img src="./images/icon-complete.svg" alt="">
+        <p class="p_thanks">THANK YOU!</p>
+        <P class="p_cardDetails">We´ve added your card details</P>
+        <button class="style_btn2" onclick="alternarDivs('div2')">Continue</button>
+    </div>
+
+    <script src="/script.js"> </script>
+    <script src="java.js"></script>
+</body>
+
+</html>
